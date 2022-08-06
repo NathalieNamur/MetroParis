@@ -8,6 +8,9 @@ import org.jgrapht.Graph;
 import org.jgrapht.Graphs;
 import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.graph.SimpleDirectedGraph;
+import org.jgrapht.traverse.BreadthFirstIterator;
+import org.jgrapht.traverse.DepthFirstIterator;
+import org.jgrapht.traverse.GraphIterator;
 
 import it.polito.tdp.metroparis.db.MetroDAO;
 
@@ -62,7 +65,35 @@ public class Model {
 		System.out.println("Numero vertici grafo: "+grafo.vertexSet().size());
 		System.out.println("Numero archi grafo: "+grafo.edgeSet().size());
 		
-
+		
+		
+		//Visita del grafo, tramite il metodo:
+		visitaGrafo(fermate.get(0));
+		
+	}
+	
+	
+	public void visitaGrafo(Fermata partenza) {
+		
+		//1a.Iteratore (in ampiezza):
+		GraphIterator<Fermata,DefaultEdge> iteratore = 
+				new BreadthFirstIterator<>(this.grafo, partenza);
+		
+		//1b.Iteratore (in profondità):
+		//GraphIterator<Fermata,DefaultEdge> iteratore = 
+		//		new DepthFirstIterator<>(this.grafo, partenza);
+		
+		
+		//2.Finchè l'iteratore trova vertici successivi,
+		//questi sono da considerare:
+		
+		System.out.println("Visita grafo:");
+		
+		while(iteratore.hasNext()) {
+			Fermata f = iteratore.next();
+			System.out.print(f+" -- ");
+		}
+			
 	}
 }
 
