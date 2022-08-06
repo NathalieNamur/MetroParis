@@ -11,6 +11,7 @@ import com.zaxxer.hikari.HikariDataSource;
  * Uses the HikariCP library for managing a connection pool
  * @see <a href="https://brettwooldridge.github.io/HikariCP/">HikariCP</a>
  */
+
 public class DBConnect {
 
 	private static final String jdbcURL = "jdbc:mysql://localhost/metroparis?serverTimezone=UTC";
@@ -24,7 +25,7 @@ public class DBConnect {
 
 			ds.setJdbcUrl(jdbcURL);
 			ds.setUsername("root");
-			ds.setPassword("root");
+			ds.setPassword("moustache");
 
 			// configurazione MySQL
 			ds.addDataSourceProperty("cachePrepStmts", "true");

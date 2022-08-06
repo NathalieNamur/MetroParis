@@ -7,6 +7,8 @@ public class Linea {
 	private double velocita;
 	private double intervallo;
 
+	
+	
 	public Linea(int idLinea, String nome, double velocita, double intervallo) {
 		this.idLinea = idLinea;
 		this.nome = nome;
@@ -14,6 +16,8 @@ public class Linea {
 		this.intervallo = intervallo;
 	}
 
+	
+	
 	public Linea(int idLinea) {
 		this.idLinea = idLinea;
 	}

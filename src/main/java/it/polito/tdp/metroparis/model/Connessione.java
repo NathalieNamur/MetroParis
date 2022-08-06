@@ -7,6 +7,8 @@ public class Connessione {
 	private Fermata stazP;
 	private Fermata stazA;
 
+
+	
 	public Connessione(int idConnessione, Linea linea, Fermata stazP, Fermata stazA) {
 		this.idConnessione = idConnessione;
 		this.linea = linea;
@@ -14,6 +16,8 @@ public class Connessione {
 		this.stazA = stazA;
 	}
 
+	
+	
 	public int getIdConnessione() {
 		return idConnessione;
 	}
